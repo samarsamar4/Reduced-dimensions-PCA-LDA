@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Nov  2 09:40:28 2019
 
-@author: Administrator
-"""
 
 from sklearn.datasets.samples_generator import make_blobs
 Data, y=make_blobs(n_samples=600,n_features=2,centers=4)
@@ -41,7 +36,7 @@ for k in range(2,10):
     plt.subplot(221)
     visualizer = SilhouetteVisualizer(model, colors='yellowbrick')
     visualizer.fit(Data)        # Fit the data to the visualizer
-    visualizer.show()        # Finalize and render the figure   
+    visualizer.show()           # Finalize and render the figure   
     plt.subplot(222)
     plt.scatter(Data[:,0],Data[:,1],c=y_pred,cmap='rainbow')
     
